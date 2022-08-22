@@ -36,13 +36,6 @@ public class MainService {
 
 
 
-//                    for (int i=0;i< arreCantidad.length;i++){
-//
-//                    }
-//        JOptionPane.showMessageDialog(null,arreCantidad.length);
-//
-
-
         int cantidadJuguetes = Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de juguetes"));
 
         while (bandera) {
@@ -50,7 +43,11 @@ public class MainService {
             switch (menuPrincipal) {
                 case 1:
 
+
+
                     for (int i = 0; i < cantidadJuguetes; i++) {
+
+
 
                         JOptionPane.showMessageDialog(null, "DATOS DEL EMPLEADO");
 
@@ -111,7 +108,7 @@ public class MainService {
                 case 2:
                     String nombre = JOptionPane.showInputDialog("ingrese el nombre para buscar");
 
-                    for (int i = 0; i < arregloJuguete.length; i++) {
+                    for (int i = 0; i < arregloEmpleado.length; i++) {
                         if (arregloJuguete[i] != null && arregloJuguete[i].getEmpleado().getNombre().equals(nombre)) {
                             JOptionPane.showMessageDialog(null, "NOMBRE CLIENTE: " + arregloJuguete[i].getCliente().getNombre() + " " + "JUGUETE: " + " " + arregloJuguete[i].getNombreJuguete() + " " + "CANTIDAD: " + " " + arregloJuguete[i].getCantidad() + " " + " Precio: " + " " + arregloJuguete[i].getPrecio());
                         }
@@ -127,10 +124,6 @@ public class MainService {
                     break;
 
                 case 4:
-
-                    int mostrarDos = 0;
-                    boolean modificado=false;
-
                     String nombreProductosAumentar = JOptionPane.showInputDialog("digite el nombre del producto que desea aumentar");
 
 

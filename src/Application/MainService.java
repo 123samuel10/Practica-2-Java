@@ -69,7 +69,7 @@ public class MainService {
 
 
                         String nombreJuguete = JOptionPane.showInputDialog("ingrese el nombre del juguete");
-                        String materialJuguete = JOptionPane.showInputDialog("ingrese el material del juguete");
+                        String materialJuguete = JOptionPane.showInputDialog("ingrese el material del juguete: plastico/tela/electronico");
 
                         if (materialJuguete.equals("plastico")) {
                             JOptionPane.showMessageDialog(null, "El juguete no requiere cuidados especiales");
@@ -178,9 +178,13 @@ public class MainService {
                     }
                     break;
                 case 9:
+                    JOptionPane.showMessageDialog(null,"se ha ganado un descuento, por superar la compra de 10.000");
+                    int descuento=5000;
+                    int mostrarDescuento=0;
                     for (int i = 0; i < arregloJuguete.length; i++) {
                         if (arregloJuguete[i] != null && arregloJuguete[i].getPrecio() > 10000) {
-                            JOptionPane.showMessageDialog(null, "PRODUCTO" + " " + arregloJuguete[i].getNombreJuguete() + " Material: " + " " + arregloJuguete[i].getMaterial() + " " + "Precio: " + " " + arregloJuguete[i].getPrecio() + " " + "Cantidad: " + arregloJuguete[i].getCantidad());
+                            mostrarDescuento=arregloJuguete[i].getPrecio()-descuento;
+                            JOptionPane.showMessageDialog(null, "PRODUCTO" + " " + arregloJuguete[i].getNombreJuguete() + " Material: " + " " + arregloJuguete[i].getMaterial() + " " + "Precio: " + " " + arregloJuguete[i].getPrecio() + " " + "Cantidad: " + arregloJuguete[i].getCantidad()+" "+"Descuento: "+mostrarDescuento);
                         }
                     }
                     break;

@@ -113,11 +113,13 @@ public class ControladorJuguete {
             }
         }
     }
-
+    int mostrarTOTALJUGUETES=0;
     public void informarLaCantidadTotalDeJuguetes(){
+
         for (int i = 0; i < arregloJuguete.length; i++) {
             if (arregloJuguete[i] != null) {
-                JOptionPane.showMessageDialog(null, "la cantidad total de juguetes es:" + " " + arregloJuguete[i].getCantidad());
+             mostrarTOTALJUGUETES+=arregloJuguete[i].getCantidad();
+                JOptionPane.showMessageDialog(null, "la cantidad total de juguetes es:" + " " + mostrarTOTALJUGUETES);
             }
         }
     }
@@ -154,13 +156,17 @@ public class ControladorJuguete {
     int mostrarDescuento=0;
     public void Descuento(){
 
-        JOptionPane.showMessageDialog(null,"se ha ganado un descuento, por superar la compra de 10.000");
+
 
         for (int i = 0; i <arregloJuguete.length; i++) {
 
             if (arregloJuguete[i] != null && arregloJuguete[i].getPrecio()> 10000) {
+                JOptionPane.showMessageDialog(null,"se ha ganado un descuento, por superar la compra un producto mayor a 10.000");
                 mostrarDescuento=arregloJuguete[i].getPrecio()-descuento;
                 JOptionPane.showMessageDialog(null, "PRODUCTO" + " " + arregloJuguete[i].getNombreJuguete() + " Material: " + " " + arregloJuguete[i].getMaterial() + " " + "Precio: " + " " +arregloJuguete[i].getPrecio() + " " + "Cantidad: " + arregloJuguete[i].getCantidad()+" "+"Descuento: "+mostrarDescuento);
+            }else if (arregloJuguete[i]!=null && arregloJuguete[i].getPrecio()<10000){
+                JOptionPane.showMessageDialog(null,"no se ha ganado el descuento");
+
             }
         }
     }

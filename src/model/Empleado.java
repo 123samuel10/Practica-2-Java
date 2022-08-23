@@ -6,7 +6,7 @@ public class Empleado extends Persona{
     private int Salario;
     private String fechaIngresoLaboral;
 
-    Juguete juguete;
+
 
 
     public Empleado(String cedela, String nombre, String telefono, String dirreccionDeResidencia,int Salario,String fechaIngresoLaboral) {
@@ -19,7 +19,7 @@ public class Empleado extends Persona{
 
     }
 
-    public void setJugueteEm(Juguete juguete){this.juguete=juguete;}
+
 
 
     public int getSalario() {
@@ -40,11 +40,5 @@ public class Empleado extends Persona{
         this.fechaIngresoLaboral = fechaIngresoLaboral;
     }
 
-    public Juguete getJuguete() {
-        return juguete;
-    }
 
-    public void setJuguete(Juguete juguete) {
-        this.juguete = juguete;
-    }
 }

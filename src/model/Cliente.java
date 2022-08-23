@@ -4,7 +4,7 @@ public class Cliente extends Persona{
 
     private  String diaCumpleaños;
     private String correoElectronico;
-    Juguete juguete;
+
 
 //    DetalleVenta detalleVenta;
 

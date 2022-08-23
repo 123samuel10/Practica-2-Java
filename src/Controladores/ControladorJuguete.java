@@ -118,8 +118,7 @@ public class ControladorJuguete {
 
         for (int i = 0; i < arregloJuguete.length; i++) {
             if (arregloJuguete[i] != null) {
-             mostrarTOTALJUGUETES+=arregloJuguete[i].getCantidad();
-                JOptionPane.showMessageDialog(null, "la cantidad total de juguetes es:" + " " + mostrarTOTALJUGUETES);
+                JOptionPane.showMessageDialog(null, "la cantidad total de juguetes es:" + " " +arregloJuguete[i].getCantidad());
             }
         }
     }

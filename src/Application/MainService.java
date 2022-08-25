@@ -1,38 +1,26 @@
 package Application;
 
 import Controladores.ControladorJuguete;
-import Controladores.ControladorVenta;
+import Controladores.ControladorUsuario;
 import model.*;
-
-import javax.swing.*;
 
 public class MainService {
 
     public static void main(String[] args) {
 
-//        Cliente cliente=new Cliente("12","samuel","344","23","3","s");
-//        Empleado empleado=new Empleado("444","pepe","3","4",100,"3");
-//
-//        DetalleVenta detalleVenta=new DetalleVenta("lunes");
-//
-//
-//        Juguete juguete=new Juguete(detalleVenta,empleado,cliente,"caroo","plastico",3,400);
-//
-//        System.out.println("Dia: "+" "+detalleVenta.getFechaVenta()+" "+"CEDULA: "+empleado.getCedela()+" "+"NOMBRE:"+empleado.getNombre()+" "+"TELEFONO "+empleado.getTelefono()+" "+"DIRRECION:  "+empleado.getDirreccionDeResidencia()+" "+"SALARIO:"+ " "+empleado.getSalario()+" "+"FECHA INGRESO LABORAL:"+" "+empleado.getFechaIngresoLaboral()+" "+"Juguete"+juguete.getNombreJuguete() +"MATERIAL: "+juguete.getMaterial() +"CANTIDAD: "+juguete.getCantidad() +"PRECIO: "+juguete.getCantidad() +"precio: "+juguete.getPrecio());
-//        int p=juguete.getCantidad()*juguete.getPrecio();
-//        System.out.println("el total es:"+p);
+
         //---------------------------------------------------------------------------------------------------------------
         Menu opc = new Menu();
         boolean bandera = true;
         Juguete juguete[]=new Juguete[100];
         ControladorJuguete controladorJuguete = new ControladorJuguete();
-        ControladorVenta controladorVenta=new ControladorVenta();
+        ControladorUsuario controladorUsuario=new ControladorUsuario();
 
         while (bandera) {
             int menuPrincipal = opc.menuOpc();
             switch (menuPrincipal) {
                 case 1:
-                    controladorJuguete.agregarHistorial();
+                    controladorUsuario.agregarHistorial();
 
                     break;
                 case 2:

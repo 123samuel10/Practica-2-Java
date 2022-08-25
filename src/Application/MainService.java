@@ -20,7 +20,7 @@ public class MainService {
             int menuPrincipal = opc.menuOpc();
             switch (menuPrincipal) {
                 case 1:
-                    controladorUsuario.agregarHistorial();
+                    controladorJuguete.agregarHistorial();
 
                     break;
                 case 2:

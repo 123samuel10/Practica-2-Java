@@ -11,8 +11,10 @@ public class Juguete {
     DetalleVenta detalleVenta;
     Empleado empleado;
     Cliente cliente;
-    public Juguete(DetalleVenta detalleVenta,Empleado empleado,Cliente cliente, String nombreJuguete, String material, int cantidad, int precio) {
+    Provedor provedor;
+    public Juguete(DetalleVenta detalleVenta,Provedor provedor, Empleado empleado,Cliente cliente, String nombreJuguete, String material, int cantidad, int precio) {
         this.detalleVenta=detalleVenta;
+        this.provedor=provedor;
         this.empleado=empleado;
         this.cliente=cliente;
         this.nombreJuguete = nombreJuguete;

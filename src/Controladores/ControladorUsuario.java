@@ -1,10 +1,7 @@
 package Controladores;
 
 
-import model.Cliente;
-import model.DetalleVenta;
-import model.Empleado;
-import model.Juguete;
+import model.*;
 
 import javax.swing.*;
 

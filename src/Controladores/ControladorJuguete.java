@@ -1,9 +1,6 @@
 package Controladores;
 
-import model.Cliente;
-import model.DetalleVenta;
-import model.Empleado;
-import model.Juguete;
+import model.*;
 
 import javax.swing.*;
 
@@ -16,10 +13,15 @@ public class ControladorJuguete {
     int cantidadJuguetes = Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de juguetes"));
     int suma = 0;
     int valorTotalProductosComprados = 0;
+    ControladorUsuario controladorUsuario=new ControladorUsuario();
 
     public void agregarHistorial(){
         for (int i = 0; i < cantidadJuguetes; i++) {
-
+            String  noombreProveedor=JOptionPane.showInputDialog("ingrese el nombre del proveedor");
+            String codigoProvedor=JOptionPane.showInputDialog("ingrese el codigo del proveedor");
+            String fechaIngreso=JOptionPane.showInputDialog("fecha de ingreso proveedor");
+            String tiempoEntregProducto=JOptionPane.showInputDialog("ingrese el tiempo de entrega del producto");
+            String materialProveedor=JOptionPane.showInputDialog("ingrese el material del proveedor");
 
 
             JOptionPane.showMessageDialog(null, "DATOS DEL EMPLEADO");
@@ -62,7 +64,8 @@ public class ControladorJuguete {
             DetalleVenta p1 = new DetalleVenta(fecha);
             Empleado empleado1 = new Empleado(cedulaEmpleado, nombreEmpleado, telefonoEmpleado, dirreccionResidencia, salarioEmpleado, fechaIngresoLaboral);
             Cliente cliente1 = new Cliente(cedulaCliente, nombreClienete, telefonoCliente, dirrecionCliente, diaCumpleaños, correoClienete);
-            arregloJuguete[i] = new Juguete(p1, empleado1, cliente1, nombreJuguete, materialJuguete, cantidad, precio);
+            Provedor provedor=new Provedor(noombreProveedor,codigoProvedor,fechaIngreso,tiempoEntregProducto,materialJuguete);
+            arregloJuguete[i] = new Juguete(p1,provedor ,empleado1, cliente1, nombreJuguete, materialJuguete, cantidad, precio);
 
 
             JOptionPane.showMessageDialog(null, "RECIBO");
@@ -176,5 +179,38 @@ public class ControladorJuguete {
             }
         }
     }
+    //primer punto
+
+    public void clienteCantidadJuguetesMayor() {
+        int cantidadMayor2 = 0;
+        for (int i = 0; i < arregloJuguete.length; i++) {
+            if (arregloJuguete[i]!=null && arregloJuguete[i].getCantidad() > cantidadMayor2) {
+                cantidadMayor2 = arregloJuguete[i].getCantidad();
+
+            }
+        }
+
+        for (int i=0;i<arregloJuguete.length;i++){
+            if (arregloJuguete[i]!=null && arregloJuguete[i].getCantidad()==cantidadMayor2){
+                JOptionPane.showMessageDialog(null,"el cliente con la cantidad mayor tiene el nombre de: "+" "+arregloJuguete[i].getCliente().getNombre());
+            }
+        }
+    }
+    //segundo punto
+    public void informeDelMejorEmpleado(){
+        int cantidadMayorBuscar=0;
+        for (int i=0;i<arregloJuguete.length;i++){
+            if (arregloJuguete[i]!=null && arregloJuguete[i].getCantidad()>cantidadMayorBuscar){
+                cantidadMayorBuscar=arregloJuguete[i].getCantidad();
+            }
+        }
+        for (int i=0;i<arregloJuguete.length;i++){
+            if (arregloJuguete[i]!=null && arregloJuguete[i].getCantidad()==cantidadMayorBuscar){
+                JOptionPane.showMessageDialog(null,"el mejor empleado es: "+arregloJuguete[i].getEmpleado().getNombre()+" "+"Cliente"+arregloJuguete[i].getCliente().getNombre()+" "+"Cantidad:"+" "+arregloJuguete[i].getCantidad()+" "+"Precio: "+" "+arregloJuguete[i].getPrecio());
+            }
+        }
+    }
+
+
 
 }

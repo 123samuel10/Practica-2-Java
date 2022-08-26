@@ -48,7 +48,10 @@ public class MainService {
                     controladorJuguete.Descuento();
                     break;
                 case 10:
-                    bandera=false;
+                    controladorJuguete.clienteCantidadJuguetesMayor();
+                    break;
+                case 11:
+                    controladorJuguete.informeDelMejorEmpleado();
 
 
             }

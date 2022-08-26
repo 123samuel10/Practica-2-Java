@@ -17,11 +17,7 @@ public class ControladorJuguete {
 
     public void agregarHistorial(){
         for (int i = 0; i < cantidadJuguetes; i++) {
-            String  noombreProveedor=JOptionPane.showInputDialog("ingrese el nombre del proveedor");
-            String codigoProvedor=JOptionPane.showInputDialog("ingrese el codigo del proveedor");
-            String fechaIngreso=JOptionPane.showInputDialog("fecha de ingreso proveedor");
-            String tiempoEntregProducto=JOptionPane.showInputDialog("ingrese el tiempo de entrega del producto");
-            String materialProveedor=JOptionPane.showInputDialog("ingrese el material del proveedor");
+
 
 
             JOptionPane.showMessageDialog(null, "DATOS DEL EMPLEADO");
@@ -64,8 +60,8 @@ public class ControladorJuguete {
             DetalleVenta p1 = new DetalleVenta(fecha);
             Empleado empleado1 = new Empleado(cedulaEmpleado, nombreEmpleado, telefonoEmpleado, dirreccionResidencia, salarioEmpleado, fechaIngresoLaboral);
             Cliente cliente1 = new Cliente(cedulaCliente, nombreClienete, telefonoCliente, dirrecionCliente, diaCumpleaños, correoClienete);
-            Provedor provedor=new Provedor(noombreProveedor,codigoProvedor,fechaIngreso,tiempoEntregProducto,materialJuguete);
-            arregloJuguete[i] = new Juguete(p1,provedor ,empleado1, cliente1, nombreJuguete, materialJuguete, cantidad, precio);
+
+            arregloJuguete[i] = new Juguete(p1,empleado1, cliente1, nombreJuguete, materialJuguete, cantidad, precio);
 
 
             JOptionPane.showMessageDialog(null, "RECIBO");
@@ -80,13 +76,6 @@ public class ControladorJuguete {
         JOptionPane.showMessageDialog(null, "EL TOTAL DE LA FACTURA ES: " + " " + valorTotalProductosComprados);
 
     }
-
-
-
-
-
-
-
     public void Recibo(){
         String nombre = JOptionPane.showInputDialog("ingrese el nombre para buscar");
 
@@ -192,7 +181,7 @@ public class ControladorJuguete {
 
         for (int i=0;i<arregloJuguete.length;i++){
             if (arregloJuguete[i]!=null && arregloJuguete[i].getCantidad()==cantidadMayor2){
-                JOptionPane.showMessageDialog(null,"el cliente con la cantidad mayor tiene el nombre de: "+" "+arregloJuguete[i].getCliente().getNombre());
+                JOptionPane.showMessageDialog(null,"el cliente con la cantidad mayor tiene el nombre de: "+" "+arregloJuguete[i].getCliente().getNombre()+" "+"Dia cumpleaños"+" "+arregloJuguete[i].getCliente().getDiaCumpleaños()+" "+"Correo:"+" "+arregloJuguete[i].getCliente().getCorreoElectronico()+" "+"Producto:"+" "+arregloJuguete[i].getNombreJuguete()+" "+"Cantidad:"+" "+arregloJuguete[i].getCantidad());
             }
         }
     }
@@ -206,10 +195,22 @@ public class ControladorJuguete {
         }
         for (int i=0;i<arregloJuguete.length;i++){
             if (arregloJuguete[i]!=null && arregloJuguete[i].getCantidad()==cantidadMayorBuscar){
-                JOptionPane.showMessageDialog(null,"el mejor empleado es: "+arregloJuguete[i].getEmpleado().getNombre()+" "+"Cliente"+arregloJuguete[i].getCliente().getNombre()+" "+"Cantidad:"+" "+arregloJuguete[i].getCantidad()+" "+"Precio: "+" "+arregloJuguete[i].getPrecio());
+                JOptionPane.showMessageDialog(null,"el mejor empleado es: "+arregloJuguete[i].getEmpleado().getNombre()+"Fecha ingreso laboral "+" "+arregloJuguete[i].getEmpleado().getFechaIngresoLaboral()+" "+"Telefono"+" "+arregloJuguete[i].getEmpleado().getTelefono()+" "+"Cliente"+arregloJuguete[i].getCliente().getNombre()+" "+"Cantidad:"+" "+arregloJuguete[i].getCantidad()+" "+"Precio: "+" "+arregloJuguete[i].getPrecio());
             }
         }
     }
+    public void provedor(){
+        for (int i=0;i<cantidadJuguetes;i++){
+            String  noombreProveedor=JOptionPane.showInputDialog("ingrese el nombre del proveedor");
+            String codigoProvedor=JOptionPane.showInputDialog("ingrese el codigo del proveedor");
+            String fechaIngreso=JOptionPane.showInputDialog("fecha de ingreso proveedor");
+            String tiempoEntregProducto=JOptionPane.showInputDialog("ingrese el tiempo de entrega del producto");
+            String materialProveedor=JOptionPane.showInputDialog("ingrese el material del proveedor");
+        
+        }
+    }
+
+
 
 
 

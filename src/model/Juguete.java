@@ -12,7 +12,7 @@ public class Juguete {
     Empleado empleado;
     Cliente cliente;
     Provedor provedor;
-    public Juguete(DetalleVenta detalleVenta,Provedor provedor, Empleado empleado,Cliente cliente, String nombreJuguete, String material, int cantidad, int precio) {
+    public Juguete(DetalleVenta detalleVenta, Empleado empleado,Cliente cliente, String nombreJuguete, String material, int cantidad, int precio) {
         this.detalleVenta=detalleVenta;
         this.provedor=provedor;
         this.empleado=empleado;

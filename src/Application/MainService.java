@@ -52,6 +52,9 @@ public class MainService {
                     break;
                 case 11:
                     controladorJuguete.informeDelMejorEmpleado();
+                    break;
+                case 12:
+                    controladorJuguete.provedor();
 
 
             }

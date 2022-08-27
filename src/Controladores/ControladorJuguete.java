@@ -10,7 +10,7 @@ public class ControladorJuguete {
 
     int sumarCantidadJuguetes = 0;
 
-    int cantidadJuguetes = Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de juguetes"));
+    int cantidadJuguetes = Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de facturas"));
     int suma = 0;
     int valorTotalProductosComprados = 0;
     ControladorUsuario controladorUsuario=new ControladorUsuario();

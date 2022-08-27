@@ -16,7 +16,8 @@ public class Menu {
                 "9. Obtener los juguetes con mayor valor a un precio de 10.000\n" +
                 "10. Informe del cliente con mas cantidad de juguetes ha comprado en la tienda\n"+
                 "11. Informe del mejor empleado\n"+
-                "12. Crear Provedor"));
+                "12. Crear Provedor\n"+
+                "13. Salir"));
 
         return opcionesMenu;
     }

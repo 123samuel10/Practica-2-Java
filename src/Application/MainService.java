@@ -55,6 +55,9 @@ public class MainService {
                     break;
                 case 12:
                     controladorJuguete.provedor();
+                    break;
+                case 13:
+                    bandera=false;
 
 
             }
